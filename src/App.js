@@ -24,13 +24,13 @@ const App = () => {
   const loadMore = () => {
     setVisibleCards(prevVisibleCards => prevVisibleCards + 8); // Load 6 more cards
   };
-
+  
   return (
     <div className="container py-5">
     <h2 className='text-center'>All Product Avilable</h2>
-      <div className="row py-5">
+      <div className="row row-cols-2 row-cols-md-4 py-5">
         {products.slice(0, visibleCards).map(product => (
-          <div key={product.id} className="col-md-3 mb-3">
+          <div key={product.id} className="col mb-3">
             <div className="card h-100 p-3">
               <img
                 src={product.image}
